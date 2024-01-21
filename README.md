@@ -33,12 +33,13 @@ Löscht das Buch mit der angegebenen Id.
 
 <b>Zum Starten mit JDK 21 :</b><br>
 $ mvn clean package<br>
-$ docker-compose up
+$ docker-compose up 
 
 Bei dem ersten Start wird die Spring-Anwendung mehrmals erfolglos starten, bis die Datenbank fertig initialisiert ist.  
 
 <b>Zum Entfernen : </b><br>
-$ docker-compose down -v
+$ docker-compose down -v <br>
+$ docker rmi bookservice-backend mysql
 
 ## Funktionalität
 Die spezifizierten Anforderungen können über die Unit-Tests eingesehen werden. Siehe BookServiceApplicationTests.
