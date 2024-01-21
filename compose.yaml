@@ -1,0 +1,27 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: bookservice
+      MYSQL_PASSWORD: aPasswordPlaceholder!
+      MYSQL_ROOT_PASSWORD: 1VerySecretPasswordPlaceholder!
+      MYSQL_USER: testuser
+    volumes:
+      - data:/var/lib/mysql
+
+  backend:
+    build: ./
+    restart: unless-stopped
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: aPasswordPlaceholder!
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+
+# Named Volumes
+volumes:
+  data:
