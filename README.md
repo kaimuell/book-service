@@ -5,7 +5,7 @@ Eine Anwendung um Bücher durch eine REST-API zu verwalten.
 ##  API Beschreibung:
 <b>POST  /books</b>
 <p>
-erstellt ein neues Buch durch posten eines Buch-Objekts im Body Bspw. : {"name" : "theName", "title" : "theTitle", price : "10.00" } <br>
+Erstellt ein neues Buch durch posten eines Buch-Objekts im Body Bspw. : {"name" : "theName", "title" : "theTitle", price : "10.00" } <br>
 Alle 3 Parameter dürfen nicht Null sein, damit der Eintrag gespeichert wird.
 </p>
 <br>
