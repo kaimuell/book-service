@@ -39,7 +39,7 @@ Bei dem ersten Start wird die Spring-Anwendung mehrmals erfolglos starten, bis d
 
 <b>Zum Entfernen : </b><br>
 $ docker-compose down -v <br>
-$ docker rmi bookservice-backend mysql
+$ docker rmi book-service-backend mysql
 
 ## Funktionalität
 Die spezifizierten Anforderungen können über die Unit-Tests eingesehen werden. Siehe BookServiceApplicationTests.
